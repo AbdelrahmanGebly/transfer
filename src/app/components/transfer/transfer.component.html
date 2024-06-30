@@ -1,1 +1,200 @@
-<p>transfer works!</p>
+<section class="container-fluid py-2">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <i class="fa-solid fa-chevron-left me-2 fs-4"></i>
+        <div class="buttons">
+          <button class="btn px-5 btn-primary ms-2">
+            <i class="fa-solid fa-print"></i>
+            طباعه
+          </button>
+          <button class="btn px-5 btn-primary ms-2">
+            <i class="fa-solid fa-up-down"></i>
+            Print Sort
+          </button>
+          <button class="btn px-5 btn-dark">
+            <i class="fa-solid fa-floppy-disk"></i>
+            حفظ
+          </button>
+        </div>
+    </div>
+    <div class="row py-2 align-items-center container-fluid justify-content-start">
+      <div class="col-lg-4 row mt-3 mt-lg-0">
+        <label for="branch" class="col-4 text-center fw-bold">الفرع</label>
+        <select name="branch" class="col-7 py-1" id="branch">
+          <option value="">فرع 1</option>
+          <option value="">فرع 2</option>
+          <option value="">فرع 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-3 mt-lg-0 align-items-center">
+        <label for="user" class="col-4 text-center fw-bold">المستخدم</label>
+        <input type="text" class="col-7" id="user" placeholder="إسم المستخدم">
+      </div>
+      <div class="col-lg-4 row mt-3 mt-lg-0 align-items-center">
+        <label for="time" class="col-4 text-center fw-bold">الوقت</label>
+        <input type="time" class="col-7" id="time" placeholder="الوقت">
+      </div>
+      <div class="line bg-primary my-2"></div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="fileNumber" class="col-4 text-center fw-bold">رقم المستند</label>
+        <input type="text"  class="col-7" id="fileNumber" placeholder="رقم المستند">
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="filDate" class="col-4 text-center fw-bold">تاريخ المستند</label>
+        <input type="date" class="col-7" id="filDate" placeholder="إسم المستخدم">
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="fileStatus" class="col-4 text-center fw-bold">حالة المستخدم</label>
+        <input type="text" class="col-7" id="fileStatus" placeholder="حالة المستخدم">
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="branch1" class="col-4 text-center fw-bold">من فرع</label>
+        <select name="branch1" class="col-7 py-1" id="branch1">
+          <option value="">فرع 1</option>
+          <option value="">فرع 2</option>
+          <option value="">فرع 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="branch2" class="col-4 text-center fw-bold">إلى فرع</label>
+        <select name="branch2" class="col-7 py-1" id="branch2">
+          <option value="">فرع 1</option>
+          <option value="">فرع 2</option>
+          <option value="">فرع 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="fileRequestNumber" class="col-6 fw-bold small">رقم سند الإستلام في الفرع</label>
+        <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="رقم سند الإستلام في الفرع">
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="storage" class="col-4 text-center fw-bold">من مخزن</label>
+        <select name="storage" class="col-7 py-1" id="storage">
+          <option value="">مخزن 1</option>
+          <option value="">مخزن 2</option>
+          <option value="">مخزن 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="storage1" class="col-4 text-center fw-bold">إلى مخزن</label>
+        <select name="storage1" class="col-7 py-1" id="storage1">
+          <option value="">مخزن 1</option>
+          <option value="">مخزن 2</option>
+          <option value="">مخزن 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="fileRequestNumber" class="col-6 fw-bold small">الرقم اليدوي</label>
+        <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="الرقم اليدوي">
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="client" class="col-4 text-center fw-bold">رقم طلب المواد</label>
+        <select name="client" class="col-7 py-1" id="client">
+          <option value="">عميل 1</option>
+          <option value="">عميل 2</option>
+          <option value="">عميل 3</option>
+        </select>
+      </div>
+      <div class="col-lg-4 row mt-2 align-items-center">
+        <label for="requestDate" class="col-5 text-center fw-bold">تاريخ طلب المواد</label>
+        <input type="date" name="requestDate" class="col-7" id="requestDate">
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-12 row mt-2 align-items-center">
+        <label for="notes" class="col-1 text-center fw-bold">ملاحظات</label>
+        <input type="text" name="notes" class="col-10 py" id="notes">
+      </div>
+    </div>
+    <section>
+      <div class="selectors"></div>
+      <table class="table table-bordered table-striped text-center">
+        <thead>
+          <tr>
+            <th class="head align-middle">الصنف</th>
+            <th class="head align-middle">بيان</th>
+            <th class="head align-middle">الوحدة</th>
+            <th class="head align-middle">الكمية</th>
+            <th class="head align-middle">سعر</th>
+            <th class="head align-middle">الإجمالي</th>
+            <th class="head align-middle">مركز التكلفة</th>
+            <th class="head align-middle">تاريخ الصلاحية</th>
+            <th class="align-middle">
+              <button class="btn btn-success btn-sm">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="align-middle">
+              <select name="category" class="w-100">
+                <option value="">صنف 1</option>
+                <option value="">صنف 2</option>
+                <option value="">صنف 3</option>
+              </select>
+            </td>
+            <td class="align-middle">
+              <input type="text" placeholder="test" class="w-100">
+            </td>
+            <td class="align-middle">
+              <select name="category" class="w-100">
+                <option value="">صنف 1</option>
+                <option value="">صنف 2</option>
+                <option value="">صنف 3</option>
+              </select>
+            </td>
+            <td class="align-middle">
+              <input type="number" class="w-100" placeholder="الكميه">
+            </td>
+            <td class="align-middle">
+              <input type="number" class="w-100" placeholder="السعر الكلي">
+            </td>
+            <td class="align-middle">
+              <input type="number" class="w-100" placeholder="الإجمالي">
+            </td>
+            <td class="align-middle">
+              <select name="category" class="w-100">
+                <option value="">صنف 1</option>
+                <option value="">صنف 2</option>
+                <option value="">صنف 3</option>
+              </select>
+            </td>
+            <td class="align-middle">
+              <input type="date" class="w-100">
+            </td>
+            <td class="align-middle">
+              <button class="btn btn-danger btn-sm">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container-fluid">
+        <div class="row py-2 container-fluid justify-content-between">
+          <div class="col-lg-5 row">
+            <label for="total" class="text-danger col-3 fw-bold">صافي الفاتورة</label>
+            <input type="number" class="col-9" id="total">
+          </div>
+          <div class="col-lg-6">
+            <label for="price" class="col-3 fw-bold">رصيد الصنف</label>
+            <input type="number" class="col-8" id="price">
+          </div>
+        </div>
+        <div class="row py-2 container-fluid justify-content-end">
+          <div class="col-lg-3 row">
+            <label for="catPrice" class="col-5 fw-bold">تكلفة الصنف</label>
+            <input type="number" class="col-7" id="catPrice">
+          </div>
+          <div class="col-lg-3">
+            <label for="checkCost" class="col-5 fw-bold">تكلفة الفاتورة</label>
+            <input type="number" class="col-7" id="checkCost">
+          </div>
+        </div>
+      </div>
+    </section>
+</section>
