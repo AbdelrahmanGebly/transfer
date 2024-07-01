@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TransferComponent } from './components/transfer/transfer.component';
 import { AgainTransferWithCssComponent } from './components/again-transfer-with-css/again-transfer-with-css.component';
+import { FinanceComponent } from './components/finance/finance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransferComponent,
-    AgainTransferWithCssComponent
+    AgainTransferWithCssComponent,
+    FinanceComponent
   ],
   imports: [
     BrowserModule,

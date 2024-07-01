@@ -1,0 +1,53 @@
+section{
+  direction: rtl;
+  margin-block: 50px;
+}
+.buttonsContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+.buttonsContainer button{
+  border: none;
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.779);
+  border-radius: 5px;
+  color: #fff;
+}
+.buttonsContainer button:hover{
+  background-color: black;
+}
+.fieldset , .two{
+  border: 1px solid #ddd;
+  width: 75%;
+  padding: 30px 50px;
+}
+.fieldset{
+  display: flex;
+  justify-content: space-between;
+}
+.two{
+  width: 50%;
+}
+label , .label{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.fieldset .box .label{
+  color:red;
+}
+.box input{
+  margin-inline: 10px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.content select{
+  width: 50%;
+}
+
+h5{
+  margin-top: 20px;
+}
