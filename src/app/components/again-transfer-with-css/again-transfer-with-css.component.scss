@@ -1,0 +1,90 @@
+button{
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+section{
+  direction: rtl;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+// =================================================
+.buttonsContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+.buttonsContainer .buttons button{
+    margin-right:20px;
+    padding: 5px 30px;
+}
+.buttonsContainer .buttons .primary{
+  background-color: rgb(42, 42, 155);
+}
+.buttonsContainer .buttons .primary:hover{
+  background-color: blue;
+}
+.buttonsContainer .buttons .danger{
+  background-color: rgb(146, 5, 5);
+}
+.buttonsContainer .buttons .danger:hover{
+  background-color: red;
+}
+// ==================================================
+.row{
+  background-color: #f5f5f5;
+  margin:0;
+}
+.row.rowsContainer{
+  padding: 20px 10px;
+}
+.row .rowContent{
+  margin-top: 10px;
+}
+.row label{
+  font-weight: bold;
+}
+// ==================================================
+section .line{
+  height: 2px;
+  background-color: blue;
+  margin-block: 10px;
+}
+// ==================================================
+table{
+  width: 100%;
+  background-color: #eee;
+  margin: 20px 0px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table , th , td{
+  border: solid #655555 1px;
+  padding: 5px;
+}
+table th , table td{
+  vertical-align: middle;
+}
+table .success{
+  background-color: green;
+}
+table .danger{
+  background-color: red;
+}
+table .head{
+  background-color: #ccc;
+}
+.head:hover{
+  background-color: #DDD;
+  cursor: default;
+  color: #fff;
+}
+
+.sectionTwo .row{
+  padding-block: 5px;
+}
+.sectionTwo .rowContent{
+  margin-block: 0px;
+  padding: 0px;
+}

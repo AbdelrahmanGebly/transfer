@@ -1,0 +1,198 @@
+<section class="container-fluid">
+  <div class="buttonsContainer">
+      <i class="fa-solid fa-chevron-left fs-4" role="button"></i>
+      <div class="buttons">
+        <button class="primary">
+          <i class="fa-solid fa-print"></i>
+          طباعه
+        </button>
+        <button class="primary">
+          <i class="fa-solid fa-up-down"></i>
+          Print Sort
+        </button>
+        <button class="danger">
+          <i class="fa-solid fa-floppy-disk"></i>
+          حفظ
+        </button>
+      </div>
+  </div>
+  <div class="row rowsContainer align-items-center container-fluid justify-content-start">
+    <div class="col-lg-4 rowContent row mt-3 mt-lg-0">
+      <label for="branch" class="col-4">الفرع</label>
+      <select name="branch" class="col-7" id="branch">
+        <option value="">فرع 1</option>
+        <option value="">فرع 2</option>
+        <option value="">فرع 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
+      <label for="user" class="col-4">المستخدم</label>
+      <input type="text" class="col-7" id="user" placeholder="إسم المستخدم">
+    </div>
+    <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
+      <label for="time" class="col-4">الوقت</label>
+      <input type="time" class="col-7" id="time" placeholder="الوقت">
+    </div>
+    <div class="line"></div>
+    <!-- ====================================== -->
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="fileNumber" class="col-4">رقم المستند</label>
+      <input type="text"  class="col-7" id="fileNumber" placeholder="رقم المستند">
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="filDate" class="col-4">تاريخ المستند</label>
+      <input type="date" class="col-7" id="filDate" placeholder="إسم المستخدم">
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="fileStatus" class="col-4">حالة المستخدم</label>
+      <input type="text" class="col-7" id="fileStatus" placeholder="حالة المستخدم">
+    </div>
+    <!-- ====================================== -->
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="branch1" class="col-4">من فرع</label>
+      <select name="branch1" class="col-7" id="branch1">
+        <option value="">فرع 1</option>
+        <option value="">فرع 2</option>
+        <option value="">فرع 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="branch2" class="col-4">إلى فرع</label>
+      <select name="branch2" class="col-7" id="branch2">
+        <option value="">فرع 1</option>
+        <option value="">فرع 2</option>
+        <option value="">فرع 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="fileRequestNumber" class="col-6 fw-bold small">رقم سند الإستلام في الفرع</label>
+      <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="رقم سند الإستلام في الفرع">
+    </div>
+    <!-- ====================================== -->
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="storage" class="col-4">من مخزن</label>
+      <select name="storage" class="col-7" id="storage">
+        <option value="">مخزن 1</option>
+        <option value="">مخزن 2</option>
+        <option value="">مخزن 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="storage1" class="col-4">إلى مخزن</label>
+      <select name="storage1" class="col-7" id="storage1">
+        <option value="">مخزن 1</option>
+        <option value="">مخزن 2</option>
+        <option value="">مخزن 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="fileRequestNumber" class="col-6 fw-bold small">الرقم اليدوي</label>
+      <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="الرقم اليدوي">
+    </div>
+    <!-- ====================================== -->
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="client" class="col-5">رقم طلب المواد</label>
+      <select name="client" class="col-7" id="client">
+        <option value="">عميل 1</option>
+        <option value="">عميل 2</option>
+        <option value="">عميل 3</option>
+      </select>
+    </div>
+    <div class="col-lg-4 rowContent row align-items-center">
+      <label for="requestDate" class="col-5">تاريخ طلب المواد</label>
+      <input type="date" name="requestDate" class="col-7" id="requestDate">
+    </div>
+    <!-- ====================================== -->
+    <div class="col-lg-10 rowContent row align-items-center">
+      <label for="notes" class="col-2">ملاحظات</label>
+      <input type="text" name="notes" class="col-10" id="notes">
+    </div>
+  </div>
+</section>
+<section class="sectionTwo">
+  <div class="selectors"></div>
+  <table>
+    <thead>
+      <tr>
+        <th class="head">الصنف</th>
+        <th class="head">بيان</th>
+        <th class="head">الوحدة</th>
+        <th class="head">الكمية</th>
+        <th class="head">سعر</th>
+        <th class="head">الإجمالي</th>
+        <th class="head">مركز التكلفة</th>
+        <th class="head">تاريخ الصلاحية</th>
+        <th class="">
+          <button class="success">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="">
+          <select name="category" class="">
+            <option value="">صنف 1</option>
+            <option value="">صنف 2</option>
+            <option value="">صنف 3</option>
+          </select>
+        </td>
+        <td class="">
+          <input type="text" placeholder="test" class="">
+        </td>
+        <td class="">
+          <select name="category" class="">
+            <option value="">صنف 1</option>
+            <option value="">صنف 2</option>
+            <option value="">صنف 3</option>
+          </select>
+        </td>
+        <td class="">
+          <input type="number" class="" placeholder="الكميه">
+        </td>
+        <td class="">
+          <input type="number" class="" placeholder="السعر الكلي">
+        </td>
+        <td class="">
+          <input type="number" class="" placeholder="الإجمالي">
+        </td>
+        <td class="">
+          <select name="category" class="">
+            <option value="">صنف 1</option>
+            <option value="">صنف 2</option>
+            <option value="">صنف 3</option>
+          </select>
+        </td>
+        <td class="">
+          <input type="date" class="">
+        </td>
+        <td class="">
+          <button class="danger">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row justify-content-between">
+    <div class="col-lg-5 row">
+      <label for="total" class="col-3">صافي الفاتورة</label>
+      <input type="number" class="col-9" id="total">
+    </div>
+    <div class="col-lg-6 row ">
+      <label for="price" class="col-3">رصيد الصنف</label>
+      <input type="number" class="col-8" id="price">
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-lg-3 row">
+      <label for="catPrice" class="col-5">تكلفة الصنف</label>
+      <input type="number" class="col-7" id="catPrice">
+    </div>
+    <div class="col-lg-3 row">
+      <label for="checkCost" class="col-5">تكلفة الفاتورة</label>
+      <input type="number" class="col-7" id="checkCost">
+    </div>
+  </div>
+</section>
