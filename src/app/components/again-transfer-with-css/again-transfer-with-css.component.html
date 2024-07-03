@@ -1,5 +1,6 @@
 <section class="container-fluid">
-  <div class="buttonsContainer">
+  <form [formGroup]="myForm">
+    <div class="buttonsContainer">
       <i class="fa-solid fa-chevron-left fs-4" role="button"></i>
       <div class="buttons">
         <button class="primary">
@@ -10,104 +11,126 @@
           <i class="fa-solid fa-up-down"></i>
           Print Sort
         </button>
-        <button class="danger">
+        <button class="danger" [disabled]="myForm.invalid"  (click)="handleForm()">
           <i class="fa-solid fa-floppy-disk"></i>
           حفظ
         </button>
       </div>
   </div>
-  <div class="row rowsContainer align-items-center container-fluid justify-content-start">
-    <div class="col-lg-4 rowContent row mt-3 mt-lg-0">
-      <label for="branch" class="col-4">الفرع</label>
-      <select name="branch" class="col-7" id="branch">
-        <option value="">فرع 1</option>
-        <option value="">فرع 2</option>
-        <option value="">فرع 3</option>
-      </select>
+    <div class="row rowsContainer align-items-center container-fluid justify-content-start">
+      <div class="col-lg-4 rowContent row mt-3 mt-lg-0">
+        <label for="branch" class="col-4">الفرع</label>
+        <select formControlName="branch" name="branch" class="col-7" id="branch">
+          <option value="">إختر فرع</option>
+          <option value="b1">فرع 1</option>
+          <option value="b2">فرع 2</option>
+          <option value="b3">فرع 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('branch')?.getError('required') && myForm.get('branch')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
+        <label for="user" class="col-4">المستخدم</label>
+        <input formControlName="username" type="text" class="col-7" id="user" placeholder="إسم المستخدم">
+        <p class="required-message" *ngIf="myForm.get('username')?.getError('required') && myForm.get('username')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
+        <label for="time" class="col-4">الوقت</label>
+        <input formControlName="time" type="time" class="col-7" id="time" placeholder="الوقت">
+        <p class="required-message" *ngIf="myForm.get('time')?.getError('required') && myForm.get('time')?.touched">This field is required</p>
+      </div>
+      <div class="line"></div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="fileNumber" class="col-4">رقم المستند</label>
+        <input formControlName="fileNumber" type="text"  class="col-7" id="fileNumber" placeholder="رقم المستند">
+        <p class="required-message" *ngIf="myForm.get('fileNumber')?.getError('required') && myForm.get('fileNumber')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="filDate" class="col-4">تاريخ المستند</label>
+        <input formControlName="fileDate" type="date" class="col-7" id="filDate" placeholder="إسم المستخدم">
+        <p class="required-message" *ngIf="myForm.get('fileDate')?.getError('required') && myForm.get('fileDate')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="fileStatus" class="col-4">حالة المستخدم</label>
+        <input formControlName="userStatus" type="text" class="col-7" id="fileStatus" placeholder="حالة المستخدم">
+        <p class="required-message" *ngIf="myForm.get('userStatus')?.getError('required') && myForm.get('userStatus')?.touched">This field is required</p>
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="branch1" class="col-4">من فرع</label>
+        <select formControlName="fromBranch" name="branch1" class="col-7" id="branch1">
+          <option value="">إختر فرع</option>
+          <option value="b1">فرع 1</option>
+          <option value="b2">فرع 2</option>
+          <option value="b3">فرع 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('branch1')?.getError('required') && myForm.get('branch1')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="branch2" class="col-4">إلى فرع</label>
+        <select formControlName="toBranch" name="branch2" class="col-7" id="branch2">
+          <option value="">إختر فرع</option>
+          <option value="b1">فرع 1</option>
+          <option value="b2">فرع 2</option>
+          <option value="b3">فرع 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('branch2')?.getError('required') && myForm.get('branch2')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="fileRequestNumber" class="col-6 fw-bold small">رقم سند الإستلام في الفرع</label>
+        <input formControlName="fileNumberInBranch" type="number" class="col-6 small" id="fileRequestNumber" placeholder="رقم سند الإستلام في الفرع">
+        <p class="required-message" *ngIf="myForm.get('fileRequestNumber')?.getError('required') && myForm.get('fileRequestNumber')?.touched">This field is required</p>
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="storage" class="col-4">من مخزن</label>
+        <select formControlName="fromStorage" name="storage" class="col-7" id="storage">
+          <option value="">إختر مخزن</option>
+          <option value="s1">مخزن 1</option>
+          <option value="s2">مخزن 2</option>
+          <option value="s3">مخزن 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('storage')?.getError('required') && myForm.get('storage')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="storage1" class="col-4">إلى مخزن</label>
+        <select formControlName="toStorage" name="storage1" class="col-7" id="storage1">
+          <option value="">إختر مخزن</option>
+          <option value="s1">مخزن 1</option>
+          <option value="s2">مخزن 2</option>
+          <option value="s3">مخزن 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('storage1')?.getError('required') && myForm.get('storage1')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="handNumber" class="col-6 fw-bold small">الرقم اليدوي</label>
+        <input formControlName="handNumber" type="number" class="col-6 small" id="handNumber" placeholder="الرقم اليدوي">
+        <p class="required-message" *ngIf="myForm.get('fileRequestNumber')?.getError('required') && myForm.get('fileRequestNumber')?.touched">This field is required</p>
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="client" class="col-5">رقم طلب المواد</label>
+        <select formControlName="requestSubjectsNumber" name="client" class="col-7" id="client">
+          <option value="">إختر العميل</option>
+          <option value="c1">عميل 1</option>
+          <option value="c2">عميل 2</option>
+          <option value="c3">عميل 3</option>
+        </select>
+        <p class="required-message" *ngIf="myForm.get('client')?.getError('required') && myForm.get('client')?.touched">This field is required</p>
+      </div>
+      <div class="col-lg-4 rowContent row align-items-center">
+        <label for="requestDate" class="col-5">تاريخ طلب المواد</label>
+        <input formControlName="requestSubjectsDate" type="date" name="requestDate" class="col-7" id="requestDate">
+        <p class="required-message" *ngIf="myForm.get('requestDate')?.getError('required') && myForm.get('requestDate')?.touched">This field is required</p>
+      </div>
+      <!-- ====================================== -->
+      <div class="col-lg-10 rowContent row align-items-center">
+        <label for="notes" class="col-2">ملاحظات</label>
+        <input formControlName="notes" type="text" name="notes" class="col-10" id="notes">
+        <p class="required-message" *ngIf="myForm.get('notes')?.getError('required') && myForm.get('notes')?.touched">This field is required</p>
+      </div>
     </div>
-    <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
-      <label for="user" class="col-4">المستخدم</label>
-      <input type="text" class="col-7" id="user" placeholder="إسم المستخدم">
-    </div>
-    <div class="col-lg-4 rowContent row mt-3 mt-lg-0 align-items-center">
-      <label for="time" class="col-4">الوقت</label>
-      <input type="time" class="col-7" id="time" placeholder="الوقت">
-    </div>
-    <div class="line"></div>
-    <!-- ====================================== -->
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="fileNumber" class="col-4">رقم المستند</label>
-      <input type="text"  class="col-7" id="fileNumber" placeholder="رقم المستند">
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="filDate" class="col-4">تاريخ المستند</label>
-      <input type="date" class="col-7" id="filDate" placeholder="إسم المستخدم">
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="fileStatus" class="col-4">حالة المستخدم</label>
-      <input type="text" class="col-7" id="fileStatus" placeholder="حالة المستخدم">
-    </div>
-    <!-- ====================================== -->
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="branch1" class="col-4">من فرع</label>
-      <select name="branch1" class="col-7" id="branch1">
-        <option value="">فرع 1</option>
-        <option value="">فرع 2</option>
-        <option value="">فرع 3</option>
-      </select>
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="branch2" class="col-4">إلى فرع</label>
-      <select name="branch2" class="col-7" id="branch2">
-        <option value="">فرع 1</option>
-        <option value="">فرع 2</option>
-        <option value="">فرع 3</option>
-      </select>
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="fileRequestNumber" class="col-6 fw-bold small">رقم سند الإستلام في الفرع</label>
-      <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="رقم سند الإستلام في الفرع">
-    </div>
-    <!-- ====================================== -->
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="storage" class="col-4">من مخزن</label>
-      <select name="storage" class="col-7" id="storage">
-        <option value="">مخزن 1</option>
-        <option value="">مخزن 2</option>
-        <option value="">مخزن 3</option>
-      </select>
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="storage1" class="col-4">إلى مخزن</label>
-      <select name="storage1" class="col-7" id="storage1">
-        <option value="">مخزن 1</option>
-        <option value="">مخزن 2</option>
-        <option value="">مخزن 3</option>
-      </select>
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="fileRequestNumber" class="col-6 fw-bold small">الرقم اليدوي</label>
-      <input type="number" class="col-6 small" id="fileRequestNumber" placeholder="الرقم اليدوي">
-    </div>
-    <!-- ====================================== -->
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="client" class="col-5">رقم طلب المواد</label>
-      <select name="client" class="col-7" id="client">
-        <option value="">عميل 1</option>
-        <option value="">عميل 2</option>
-        <option value="">عميل 3</option>
-      </select>
-    </div>
-    <div class="col-lg-4 rowContent row align-items-center">
-      <label for="requestDate" class="col-5">تاريخ طلب المواد</label>
-      <input type="date" name="requestDate" class="col-7" id="requestDate">
-    </div>
-    <!-- ====================================== -->
-    <div class="col-lg-10 rowContent row align-items-center">
-      <label for="notes" class="col-2">ملاحظات</label>
-      <input type="text" name="notes" class="col-10" id="notes">
-    </div>
-  </div>
+  </form>
 </section>
 <section class="sectionTwo">
   <div class="selectors"></div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TransferComponent } from './components/transfer/transfer.component';
 import { AgainTransferWithCssComponent } from './components/again-transfer-with-css/again-transfer-with-css.component';
 import { FinanceComponent } from './components/finance/finance.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FinanceComponent } from './components/finance/finance.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
