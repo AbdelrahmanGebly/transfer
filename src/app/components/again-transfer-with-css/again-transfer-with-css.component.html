@@ -64,7 +64,7 @@
           <option value="b2">فرع 2</option>
           <option value="b3">فرع 3</option>
         </select>
-        <p class="required-message" *ngIf="myForm.get('branch1')?.getError('required') && myForm.get('branch1')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('fromBranch')?.getError('required') && myForm.get('fromBranch')?.touched">This field is required</p>
       </div>
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="branch2" class="col-4">إلى فرع</label>
@@ -74,12 +74,12 @@
           <option value="b2">فرع 2</option>
           <option value="b3">فرع 3</option>
         </select>
-        <p class="required-message" *ngIf="myForm.get('branch2')?.getError('required') && myForm.get('branch2')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('toBranch')?.getError('required') && myForm.get('toBranch')?.touched">This field is required</p>
       </div>
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="fileRequestNumber" class="col-6 fw-bold small">رقم سند الإستلام في الفرع</label>
         <input formControlName="fileNumberInBranch" type="number" class="col-6 small" id="fileRequestNumber" placeholder="رقم سند الإستلام في الفرع">
-        <p class="required-message" *ngIf="myForm.get('fileRequestNumber')?.getError('required') && myForm.get('fileRequestNumber')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('fileNumberInBranch')?.getError('required') && myForm.get('fileNumberInBranch')?.touched">This field is required</p>
       </div>
       <!-- ====================================== -->
       <div class="col-lg-4 rowContent row align-items-center">
@@ -90,7 +90,7 @@
           <option value="s2">مخزن 2</option>
           <option value="s3">مخزن 3</option>
         </select>
-        <p class="required-message" *ngIf="myForm.get('storage')?.getError('required') && myForm.get('storage')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('fromStorage')?.getError('required') && myForm.get('fromStorage')?.touched">This field is required</p>
       </div>
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="storage1" class="col-4">إلى مخزن</label>
@@ -100,17 +100,17 @@
           <option value="s2">مخزن 2</option>
           <option value="s3">مخزن 3</option>
         </select>
-        <p class="required-message" *ngIf="myForm.get('storage1')?.getError('required') && myForm.get('storage1')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('toStorage')?.getError('required') && myForm.get('toStorage')?.touched">This field is required</p>
       </div>
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="handNumber" class="col-6 fw-bold small">الرقم اليدوي</label>
         <input formControlName="handNumber" type="number" class="col-6 small" id="handNumber" placeholder="الرقم اليدوي">
-        <p class="required-message" *ngIf="myForm.get('fileRequestNumber')?.getError('required') && myForm.get('fileRequestNumber')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('handNumber')?.getError('required') && myForm.get('handNumber')?.touched">This field is required</p>
       </div>
       <!-- ====================================== -->
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="client" class="col-5">رقم طلب المواد</label>
-        <select formControlName="requestSubjectsNumber" name="client" class="col-7" id="client">
+        <select formControlName="client" name="client" class="col-7" id="client">
           <option value="">إختر العميل</option>
           <option value="c1">عميل 1</option>
           <option value="c2">عميل 2</option>
@@ -121,7 +121,7 @@
       <div class="col-lg-4 rowContent row align-items-center">
         <label for="requestDate" class="col-5">تاريخ طلب المواد</label>
         <input formControlName="requestSubjectsDate" type="date" name="requestDate" class="col-7" id="requestDate">
-        <p class="required-message" *ngIf="myForm.get('requestDate')?.getError('required') && myForm.get('requestDate')?.touched">This field is required</p>
+        <p class="required-message" *ngIf="myForm.get('requestSubjectsDate')?.getError('required') && myForm.get('requestSubjectsDate')?.touched">This field is required</p>
       </div>
       <!-- ====================================== -->
       <div class="col-lg-10 rowContent row align-items-center">

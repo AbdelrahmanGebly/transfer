@@ -27,6 +27,7 @@ ngOnInit(): void {
     handNumber:new FormControl('', Validators.required),
     requestSubjectsNumber : new FormControl('', Validators.required),
     requestSubjectsDate: new FormControl('', Validators.required),
+    client: new FormControl('', Validators.required),
     notes:new FormControl('', Validators.required)
   })
 }
