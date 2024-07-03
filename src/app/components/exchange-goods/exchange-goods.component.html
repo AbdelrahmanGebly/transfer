@@ -1,5 +1,5 @@
 <section>
-  <div class="container-fluid">
+  <form class="container-fluid" [formGroup]="myForm">
     <div class="buttonsContainer">
       <i class="fa-solid fa-chevron-left fs-4" role="button"></i>
       <div class="buttons">
@@ -20,15 +20,15 @@
     <div class="row container-fluid">
       <div class="col-lg-5 row align-items-center">
         <label for="branch" class="col-2">الفرع</label>
-        <select class="col-8" name="branch" id="branch">
+        <select formArrayName="branch" class="col-8" name="branch" id="branch">
           <option value="فرع 1">فرع 1</option>
           <option value="فرع 2">فرع 2</option>
           <option value="فرع 3">فرع 3</option>
         </select>
       </div>
       <div class="col-lg-4 row  container-fluid align-items-center">
-        <label for="user" class="col-3">المستخدم</label>
-        <select class="col-8" name="storage" id="storage">
+        <label for="username" class="col-3">المستخدم</label>
+        <select formControlName="username" class="col-8" name="username" id="username">
           <option value="عميل 1">عميل 1</option>
           <option value="عميل 2">عميل 2</option>
           <option value="عميل 3">عميل 3</option>
@@ -36,77 +36,77 @@
       </div>
       <div class="col-lg-3 row  container-fluid align-items-center mt-2 mt-lg-0">
         <label for="time" class="col-5">الوقت</label>
-        <input type="time" class="col-7" id="time" placeholder="الوقت">
+        <input formControlName="time" type="time" class="col-6" id="time" placeholder="الوقت">
       </div>
     </div>
+    <hr>
+    <!-- ==================================== -->
     <div class="row  container-fluid">
-      <div class="col-lg-7 row  container-fluid align-items-center">
+      <div class="col-lg-8 row  container-fluid align-items-center">
         <div class="col-md-6 row">
-          <label for="branch" class="col-4">رقم المستند</label>
-          <input type="number" class="col-8" id="branch" placeholder="رقم المستند">
+          <label for="fileNumber" class="col-4">رقم المستند</label>
+          <input formControlName="fileNumber" type="number" class="col-8" id="fileNumber" placeholder="رقم المستند">
         </div>
         <div class="col-md-6 row">
-          <label for="branch" class="col-4">تاريخ المستند</label>
-          <input type="date" class="col-8" id="branch" placeholder="التاريخ">
+          <label for="fileDate" class="col-4">تاريخ المستند</label>
+          <input formControlName="fileDate" type="text" class="col-8" id="fileDate" placeholder="شهر-يوم-سنه" onfocus="(this.type='date')" onblur="(this.type='text')">
         </div>
       </div>
-      <div class="col-lg-3 row align-items-center mt-2 mt-lg-0">
-        <label for="check" class="col-5">رقم الفاتوره اليدوي</label>
-        <input type="number" class="col-7" id="check" >
+      <div class="col-lg-4 row align-items-center mt-2 mt-lg-0">
+        <label for="endRequestDate" class="col-5">تارخ إنتهاء الطلب</label>
+        <input formControlName="endRequestDate" type="date" class="col-7" id="endRequestDate" placeholder="شهر-يوم-سنه" onfocus="(this.type='date')" onblur="(this.type='text')">
       </div>
-      <div class="col-lg-2 row align-items-center mt-2 mt-lg-0">
-        <label for="status" class="col-7">حالة السند</label>
-        <input type="text" class="col-5" id="status">
-      </div>
-      <hr>
       <!-- ================================================================================= -->
-      <div class="col-lg-8 row align-items-center">
-        <label for="branch2" class="col-2">من فرع</label>
-        <select class="col-8" name="branch2" id="branch2">
-          <option value="فرع 1">فرع 1</option>
-          <option value="فرع 2">فرع 2</option>
-          <option value="فرع 3">فرع 3</option>
+      <div class="col-lg-6 row  container-fluid align-items-center mt-2 mt-lg-0">
+        <label for="client" class="col-3">إعتمد بواسطة</label>
+        <select formControlName="adoptedBy" class="col-8" name="client" id="client">
+          <option value="عميل 1">عميل 1</option>
+          <option value="عميل 2">عميل 2</option>
+          <option value="عميل 3">عميل 3</option>
+        </select>
+      </div>
+      <div class="col-lg-6 row  container-fluid align-items-center mt-2 mt-lg-0">
+        <label for="client2" class="col-3">بتوصية من</label>
+        <select formControlName="recommendedBy" class="col-8" name="client2" id="client2">
+          <option value="عميل 1">عميل 1</option>
+          <option value="عميل 2">عميل 2</option>
+          <option value="عميل 3">عميل 3</option>
         </select>
       </div>
       <div class="col-lg-8 row align-items-center">
-        <label for="storage" class="col-2">من مخزن</label>
-        <select class="col-8" name="storage" id="storage">
+        <label for="project" class="col-2">المشروع</label>
+        <select formControlName="project" class="col-4" name="project" id="project">
+          <option value="مشروع 1">مشروع 1</option>
+          <option value="مشروع 2">مشروع 2</option>
+          <option value="مشروع 3">مشروع 3</option>
+        </select>
+      </div>
+      <div class="col-lg-8 row align-items-center">
+        <label for="location" class="col-2">الموقع</label>
+        <select formControlName="location" class="col-4" name="location" id="location">
+          <option value="موقع 1">موقع 1</option>
+          <option value="موقع 2">موقع 2</option>
+          <option value="موقع 3">موقع 3</option>
+        </select>
+      </div>
+      <div class="col-lg-8 row align-items-center">
+        <label for="storage" class="col-2">المخزن</label>
+        <select formControlName="storage" class="col-4" name="storage" id="storage">
           <option value="مخزن 1">مخزن 1</option>
           <option value="مخزن 2">مخزن 2</option>
           <option value="مخزن 3">مخزن 3</option>
         </select>
       </div>
       <div class="col-lg-4 row align-items-center">
-        <label for="recieveNumber" class="col-7">رقم سند الاستلام في الفرع</label>
-        <input type="number" class="col-5" id="recieveNumber">
+        <label for="file" class="col-7">إدراج ملف PDF للمستند</label>
+        <input formControlName="file" type="file" class="col-5" name="" id="file">
       </div>
-      <div class="col-lg-8 row align-items-center">
-        <label for="branch3" class="col-2 fw-bold">إلى فرع</label>
-        <select class="col-8" name="branch3" id="branch3">
-          <option value="فرع 1">فرع 1</option>
-          <option value="فرع 2">فرع 2</option>
-          <option value="فرع 3">فرع 3</option>
-        </select>
-      </div>
-      <div class="col-lg-8 row align-items-center">
-        <label for="storage2" class="col-2">إلى مخزن</label>
-        <select class="col-8" name="storage2" id="storage2">
-          <option value="مخزن 1">مخزن 1</option>
-          <option value="مخزن 2">مخزن 2</option>
-          <option value="مخزن 3">مخزن 3</option>
-        </select>
-      </div>
-      <div class="col-lg-4 row justify-content-between">
-        <button for="request" class="col-4 primary" role="button">طلب المواد</button>
-        <input type="text" class="col-5" id="request">
-        <div class="col-1"></div>
-      </div>
-      <div class="col-lg-8 row align-items-center">
+      <div class="col-lg-8 row align-items-center justify-content-center">
         <label for="notes" class="col-2">ملاحظات</label>
-        <input type="text" class="col-10" id="notes" placeholder="رقم المخزن">
+        <input formControlName="notes" type="text" class="col-10" id="notes" placeholder="أدخل ملاحظاتك">
       </div>
     </div>
-  </div>
+  </form>
 </section>
 <section>
   <table>
