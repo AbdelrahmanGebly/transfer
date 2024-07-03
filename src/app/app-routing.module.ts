@@ -7,10 +7,10 @@ import { ExchangeGoodsComponent } from './components/exchange-goods/exchange-goo
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:"transferCSS",pathMatch:"full"},
-  {path:"transferBS",component:TransferComponent,title:"Trasfer Page (BS)"},
-  {path:"transferCSS",component:AgainTransferWithCssComponent,title:"Trasfer Page (CSS)"},
-  {path:"finance",component:FinanceComponent,title:"Finance"},
+  {path:'',redirectTo:"transferBS",pathMatch:"full"},
+  {path:"transferBS",component:TransferComponent,title:"التحويلات 1"},
+  {path:"transferCSS",component:AgainTransferWithCssComponent,title:"التحويلات 2"},
+  {path:"finance",component:FinanceComponent,title:"حساب الضريبة"},
   {path:"goods",component:ExchangeGoodsComponent,title:"طلب صرف البضاعة"},
   {path:"**",component:NotFoundComponent, title:"Error 404"}
 ];
