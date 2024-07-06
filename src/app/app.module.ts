@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExchangeGoodsComponent } from './components/exchange-goods/exchange-goods.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { SheetComponent } from './components/sheet/sheet.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     FinanceComponent,
     NavbarComponent,
     ExchangeGoodsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SheetComponent
   ],
   imports: [
     BrowserModule,

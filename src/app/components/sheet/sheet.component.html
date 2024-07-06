@@ -1,0 +1,363 @@
+<form [formGroup]="progressControl">
+  <table class="table text-center border table-bordered">
+    <thead>
+      <tr>
+        <th>heading</th>
+        <th>constant</th>
+        <th>dropdown</th>
+        <th>heading</th>
+        <th>constant</th>
+        <th>dropdown</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="even">
+        <td rowspan="2">gneral</td>
+        <td>moderate general condition</td>
+        <td>
+          <select formControlName="moderateGeneralConditionM">
+            <option value="good">good</option>
+            <option value="bad">bad</option>
+            <option value="min">min</option>
+          </select>
+        </td>
+        <td rowspan="2">gneral</td>
+        <td>moderate general condition</td>
+        <td>
+          <select formControlName="moderateGeneralConditionN">
+            <option value="good" >good</option>
+            <option value="bad">bad</option>
+            <option value="min">min</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>stable vital sings</td>
+        <td>
+          <select formControlName="stableVitalSingsM">
+            <option value="stable" >stable</option>
+            <option value="unstable">unstable</option>
+          </select>
+        </td>
+        <td>stable vital signs</td>
+        <td>
+          <select formControlName="stableVitalSingsN">
+            <option value="stable" >stable</option>
+            <option value="unstable">unstable</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">cons</td>
+        <td>concious level</td>
+        <td>
+          <select formControlName="conciousLevelM">
+            <option value="concious" >concious</option>
+            <option value="un concious">un concious</option>
+          </select>
+        </td>
+        <td rowspan="4">cons</td>
+        <td>concious level</td>
+        <td>
+          <select formControlName="conciousLevelN">
+            <option value="concious" >concious</option>
+            <option value="un concious">un concious</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>activity</td>
+        <td>
+          <select formControlName="activityM">
+            <option value="mild" >mild</option>
+            <option value="moderate activity">moderate activity</option>
+            <option value="hyperectic">hyperectic</option>
+          </select>
+        </td>
+        <td>activity</td>
+        <td>
+          <select formControlName="activityN">
+            <option value="mild" >mild</option>
+            <option value="moderate activity">moderate activity</option>
+            <option value="hyperectic">hyperectic</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>aniterior fontanel</td>
+        <td>
+          <select formControlName="aniteriorFontanelM">
+            <option value="at level" >at level</option>
+            <option value="depresssed">depresssed</option>
+            <option value="puulged">puulged</option>
+          </select>
+        </td>
+        <td>aniterior fontanel</td>
+        <td>
+          <select formControlName="aniteriorFontanelN">
+            <option value="at level" >at level</option>
+            <option value="depresssed">depresssed</option>
+            <option value="puulged">puulged</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>fist</td>
+        <td>
+          <select formControlName="fistM">
+            <option value="no" >no</option>
+            <option value="yes">yes</option>
+          </select>
+        </td>
+        <td>fist</td>
+        <td>
+          <select formControlName="fistN">
+            <option value="no" >no</option>
+            <option value="yes">yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td rowspan="5">cvs</td>
+        <td>heart sounds</td>
+        <td>
+          <select formControlName="heartSoundsM">
+            <option value="s1+s2" >s1+s2</option>
+            <option value="s1+s2+0">s1+s2+0</option>
+          </select>
+        </td>
+        <td rowspan="5">cvs</td>
+        <td>heart sounds</td>
+        <td>
+          <select formControlName="heartSoundsN">
+            <option value="s1+s2" >s1+s2</option>
+            <option value="s1+s2+0">s1+s2+0</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>murmer</td>
+        <td>
+          <select formControlName="murmerM">
+            <option value="systolic" >systolic</option>
+            <option value="dia systolic">dia systolic</option>
+          </select>
+        </td>
+        <td>murmer</td>
+        <td>
+          <select formControlName="murmerN">
+            <option value="systolic" >systolic</option>
+            <option value="dia systolic">dia systolic</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>perfusion</td>
+        <td>
+          <select formControlName="perfusionM">
+            <option value="average" >average</option>
+            <option value="good">good</option>
+            <option value="bad">bad</option>
+          </select>
+        </td>
+        <td>perfusion</td>
+        <td>
+          <select formControlName="perfusionN">
+            <option value="average" >average</option>
+            <option value="good">good</option>
+            <option value="bad">bad</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>crt</td>
+        <td>
+          <select formControlName="crtM">
+            <option value="normal" >normal</option>
+            <option value="upnormal">upnormal</option>
+          </select>
+        </td>
+        <td>crt</td>
+        <td>
+          <select formControlName="crtN">
+            <option value="normal" >normal</option>
+            <option value="upnormal">upnormal</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>heart rate</td>
+        <td>
+          <select formControlName="heartRateM">
+            <option value="tachycardia" >tachycardia</option>
+            <option value="bradycardia">bradycardia</option>
+            <option value="normal">normal</option>
+          </select>
+        </td>
+        <td>heart rate</td>
+        <td>
+          <select formControlName="heartRateN">
+            <option value="tachycardia" >tachycardia</option>
+            <option value="bradycardia">bradycardia</option>
+            <option value="normal">normal</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">chest</td>
+        <td>air entry</td>
+        <td>
+          <select formControlName="airEntryM">
+            <option value="bilaterlal equal" >bilaterlal equal</option>
+            <option value="absent on left">absent on left</option>
+            <option value="absent on right">absent on right</option>
+          </select>
+        </td>
+        <td rowspan="3">chest</td>
+        <td>air entry</td>
+        <td>
+          <select formControlName="airEntryN">
+            <option value="bilaterlal equal" >bilaterlal equal</option>
+            <option value="absent on left">absent on left</option>
+            <option value="absent on right">absent on right</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>rd</td>
+        <td>
+          <select formControlName="rdM">
+            <option value="no rd" >no rd</option>
+            <option value="present">present</option>
+          </select>
+        </td>
+        <td>rd</td>
+        <td>
+          <select formControlName="rdN">
+            <option value="no rd" >no rd</option>
+            <option value="present">present</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>added sounds</td>
+        <td>
+          <select formControlName="addedSoundsM">
+            <option value="0" >0</option>
+            <option value="creptetation">creptetation</option>
+            <option value="rhonchi">rhonchi</option>
+          </select>
+        </td>
+        <td>added sounds</td>
+        <td>
+          <select formControlName="addedSoundsN">
+            <option value="0" >0</option>
+            <option value="creptetation">creptetation</option>
+            <option value="rhonchi">rhonchi</option>
+          </select>
+        </td>
+      </tr>
+      <!-- ======================== -->
+      <tr class="even">
+        <td rowspan="6">git</td>
+        <td>vomiting</td>
+        <td>
+          <select formControlName="vomitingM">
+            <option value="no" >no</option>
+            <option value="vomiting">vomiting</option>
+          </select>
+        </td>
+        <td rowspan="6">git</td>
+        <td>vomiting</td>
+        <td>
+          <select formControlName="vomitingN">
+            <option value="no" >no</option>
+            <option value="vomiting">vomiting</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>pass stool</td>
+        <td>
+          <select formControlName="passStoolM">
+            <option value="pass stool" >pass stool</option>
+            <option value="not pass stool">not pass stool</option>
+          </select>
+        </td>
+        <td>pass stool</td>
+        <td>
+          <select formControlName="passStoolN">
+            <option value="pass stool" >pass stool</option>
+            <option value="not pass stool">not pass stool</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>tolerate feeding</td>
+        <td>
+          <select formControlName="tolerateFeedingM">
+            <option value="tolerate feeding" >tolerate feeding</option>
+            <option value="un tolerate feeding">un tolerate feeding</option>
+          </select>
+        </td>
+        <td>tolerate feeding</td>
+        <td>
+          <select formControlName="tolerateFeedingN">
+            <option value="tolerate feeding" >tolerate feeding</option>
+            <option value="un tolerate feeding">un tolerate feeding</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>no organomegaly</td>
+        <td>
+          <select formControlName="noOrganomegalyM">
+            <option value="spleenomegally" >spleenomegally</option>
+            <option value="hepatomegally">hepatomegally</option>
+          </select>
+        </td>
+        <td>no organomegaly</td>
+        <td>
+          <select formControlName="noOrganomegalyN">
+            <option value="spleenomegally" >spleenomegally</option>
+            <option value="hepatomegally">hepatomegally</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>distension</td>
+        <td>
+          <select formControlName="distensionM" name="distension">
+            <option value="distension" >distension</option>
+            <option value="no distension">no distension</option>
+          </select>
+        </td>
+        <td>distension</td>
+        <td>
+          <select formControlName="distensionN" name="distension">
+            <option value="distension">distension</option>
+            <option value="no distension">no distension</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="even">
+        <td>lax</td>
+        <td>
+          <select formControlName="laxM" name="lax">
+            <option value="lax" >lax</option>
+            <option value="regid">regid</option>
+            <option value="tense">tense</option>
+          </select>
+        </td>
+        <td>lax</td>
+        <td>
+          <select formControlName="laxN" name="lax">
+            <option value="lax" >lax</option>
+            <option value="regid">regid</option>
+            <option value="tense">tense</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
